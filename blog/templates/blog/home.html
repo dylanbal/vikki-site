@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+{% load crispy_forms_filters %}
+	<h1 class="fun">Vikki's Notary and Bookkeeping Services</h1>
+	<h3 class="fun">Email Address: vikki.azevedo@gmail.com</h3>
+	<h3 class="fun">Phone Number: 707-350-5020</h3>
+	<h5 class="fun">Please Fill Out This Form</h5>
+		<form method="post" action="#" nonvalidate>
+			{% csrf_token %}
+			{{ form|crispy }}
+			<button type="submit" class="btn btn-primary" value="save">Submit</button>
+		</form>
+{% endblock content %}
